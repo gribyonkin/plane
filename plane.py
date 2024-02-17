@@ -24,12 +24,14 @@ def html_plane_open(hashMap,_files=None,_data=None):
     
     #hashMap.remove("html_plane_all")
     #https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.0/raphael-min.js
+    #<script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.0/raphael-min.js"></script>
+
     filename = suClass.get_stored_file("plane")
     htmlstring = """
     <!DOCTYPE html>
     <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
     <head>    
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.0/raphael-min.js"></script>       
+        
         <meta content="text/html;charset=UTF-8" http-equiv="Content-Type" />
         <meta content="UTF-8" http-equiv="encoding" />
         <meta http-equiv="pragma" content="no-cache" />
