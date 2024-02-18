@@ -22,11 +22,12 @@ def template_html_plane(hashMap,_files=None,_data=None):
 
 def html_plane_open(hashMap,_files=None,_data=None):
     
-    #hashMap.remove("html_plane_all")
+    hashMap.remove("html_plane_all")
     #https://cdnjs.cloudflare.com/ajax/libs/raphael/2.2.0/raphael-min.js
     #
 
     filename = suClass.get_stored_file("plane")
+    hashMap.put("toast", filename)
     htmlstring = """
     <!DOCTYPE html>
     <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
