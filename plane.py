@@ -10,12 +10,12 @@ def template_html_plane(hashMap,_files=None,_data=None):
     with open(filename) as file1_:
         htmltxt = file1_.read()
 
-    #planename = suClass.get_stored_file("plane")
-    #with open(planename) as file2_:
-    #    planetxt = file2_.read()
-    #htmltxt.replace("###",planetxt)
+    planename = suClass.get_stored_file("plane")
+    with open(planename) as file2_:
+        planetxt = file2_.read()
+    htmltxt.replace("###",planetxt)
 
-    #htmltxt.replace("&nbsp"," ")
+    htmltxt.replace("&nbsp"," ")
     hashMap.put("html_plane_all", htmltxt)
 
     return hashMap
@@ -38,32 +38,24 @@ def html_plane_open(hashMap,_files=None,_data=None):
         <meta http-equiv="pragma" content="no-cache" />
         <meta http-equiv="X-UA-Compatible" content="IE=EmulateIE8" />
         <script type="text/javascript">
-        //define 4 boxes to draw on screen
         var boxListing = [
         {x : '100', y : '0', width : '100', height : '100', status : 'FREE', boxname : 'Box 1', GUID : 'id-001-111'}, 
         {x : '0', y : '100', width : '100', height : '100', status : 'BUSY', boxname : 'Box 2', GUID : 'id-002-222'}, 
         {x : '200', y : '100', width : '100', height : '100', status : 'FREE', boxname : 'Box 3', GUID : 'id-003-333'}, 
         {x : '0', y : '200', width : '100', height : '100', status : 'OFFICE', boxname : 'Box 4', GUID : 'id-004-444'}
         ];
-        //values that define the graphical properties of the page
         var raphObject; 
         var radiusRect = 5;
-        //the primary function of this page
         function startup() {
-            //initialize the main graphics object that is used to draw the box icons
             raphObject = Raphael('canvasdiv', 300, 300);
             drawBoxes();
         }
-        //draw all of the boxes in the json object
         function drawBoxes() {
-            //working arrays
             boxList = new Array();
             boxListText = new Array();
             boxListDrag = new Array();
             var c = raphObject.image(" """+filename+ """", 0, 0, 300, 300);
-            //loop through all boxes in the json object
             for(var i = 0; i < boxListing.length; i++) {
-                //extract the positional data from the json array
                 var px = boxListing[i].x;
                 var py = boxListing[i].y;
                 var pw = boxListing[i].width;
@@ -72,12 +64,10 @@ def html_plane_open(hashMap,_files=None,_data=None):
                 var status = boxListing[i].status;
                 var textx = 0;
                 var texty = 0;               
-                //we need to make sure that the values are numerical for calculations later
                 px = parseInt(px);
                 py = parseInt(py);
                 pw = parseInt(pw);
                 ph = parseInt(ph);                
-                //position text in the center of the box
                 textx = px + (pw * 20/100);
                 texty = py + (ph * 10/100);
                 colorBoxFree = '#2AAC55';
@@ -86,7 +76,6 @@ def html_plane_open(hashMap,_files=None,_data=None):
                 if (status == 'FREE') {colorBox = colorBoxFree};
                 if (status == 'BUSY') {colorBox = colorBoxBusy};
                 if (status == 'OFFICE') {colorBox = colorBoxOffice};
-                //deal with this individual box, position it and show a status based on color
                 boxList[i] = raphObject.rect(px, py, pw, ph, radiusRect)
                     .attr('fill', colorBox)
                     .attr('opacity', 0.9)
