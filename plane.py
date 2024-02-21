@@ -1,5 +1,7 @@
 from fileinput import filename
 from ru.travelfood.simple_ui import SimpleUtilites as suClass
+import base64
+
 
 def template_html_plane(hashMap,_files=None,_data=None):
     
@@ -12,7 +14,8 @@ def template_html_plane(hashMap,_files=None,_data=None):
 
     planename = suClass.get_stored_file("plane")
     with open(planename, encoding='base64') as file2_:
-        planetxt = file2_.read()
+        encoded_string = base64.b64encode(file2_.read()).decode('utf-8')
+    #    planetxt = file2_.read()
     #htmltxt.replace("###",planetxt)
 
     #htmltxt.replace("&nbsp"," ")
