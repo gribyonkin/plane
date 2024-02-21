@@ -10,7 +10,7 @@ def template_html_plane(hashMap,_files=None,_data=None):
     with open(filename) as file1_:
         htmltxt = file1_.read()
 
-    #planename = suClass.get_stored_file("plane")
+    planename = suClass.get_stored_file("plane")
     #with open(planename) as file2_:
     #    planetxt = file2_.read()
     #htmltxt.replace("###",planetxt)
