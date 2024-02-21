@@ -10,12 +10,12 @@ def template_html_plane(hashMap,_files=None,_data=None):
     with open(filename) as file1_:
         htmltxt = file1_.read()
 
-    planename = suClass.get_stored_file("plane")
-    with open(planename) as file2_:
-        planetxt = file2_.read()
+    #planename = suClass.get_stored_file("plane")
+    #with open(planename) as file2_:
+    #    planetxt = file2_.read()
     #htmltxt.replace("###",planetxt)
 
-    htmltxt.replace("&nbsp"," ")
+    #htmltxt.replace("&nbsp"," ")
     hashMap.put("html_plane_all", htmltxt)
 
     return hashMap
