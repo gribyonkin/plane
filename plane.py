@@ -13,13 +13,13 @@ def template_html_plane(hashMap,_files=None,_data=None):
         htmltxt = file1_.read()
 
     planename = suClass.get_stored_file("plane")
-    hashMap.put("toast", planename)
+    #hashMap.put("toast", planename)
     with open(planename,"rb") as file2_:
         encoded_string = base64.b64encode(file2_.read())
     #    planetxt = file2_.read()
     htmltxt.replace("###",encoded_string)
 
-    #htmltxt.replace("&nbsp"," ")
+    htmltxt.replace("&nbsp"," ")
     hashMap.put("html_plane_all", htmltxt)
 
     return hashMap
