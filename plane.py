@@ -5,7 +5,7 @@ def starter(hashMap,_files=None,_data=None):
     import base64
     from io import BytesIO
    
-    planename = suClass.get_stored_file("plane")
+    planename = suClass.get_stored_file("template1")
     #hashMap.put("toast", planename)
     #hashMap.put("pic_str", planename)
     with open(planename,"rb") as file2_:
