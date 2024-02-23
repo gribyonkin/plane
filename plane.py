@@ -8,8 +8,11 @@ def starter(hashMap,_files=None,_data=None):
     planename = suClass.get_stored_file("all")
     #hashMap.put("toast", planename)
     #hashMap.put("pic_str", planename)
-    with open(planename) as file2_:
-        encoded_string = base64.b64encode(file2_.read())
+    with open(filename, "rb") as image_file:
+      encoded_string = base64.b64encode(image_file.read()).decode('utf-8')
+
+    #with open(planename) as file2_:
+    #    encoded_string = base64.b64encode(file2_.read())
         #encoded_string = file2_.read()
     #    planetxt = file2_.read()
     #htmltxt.replace("###",encoded_string)
