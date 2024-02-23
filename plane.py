@@ -19,7 +19,7 @@ def template_html_plane(hashMap,_files=None,_data=None):
         encoded_string = file2_.read()
     #    planetxt = file2_.read()
     #htmltxt.replace("###",encoded_string)
-    hashMap.put("toast", encoded_string)
+    hashMap.put("toast", "encoded_string")
     #htmltxt.replace("&nbsp"," ")
     hashMap.put("html_plane_all", htmltxt)
 
