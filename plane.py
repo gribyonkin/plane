@@ -1,7 +1,24 @@
 #from fileinput import filename
 from ru.travelfood.simple_ui import SimpleUtilites as suClass
 
+def starter(hashMap,_files=None,_data=None):
+    import base64
+    from io import BytesIO
+   
+    planename = suClass.get_stored_file("all")
+    #hashMap.put("toast", planename)
+    hashMap.put("pic_str", planename)
+    #with open(planename,"rb") as file2_:
+    #    encoded_string = base64.b64encode(file2_.read())
+        #encoded_string = file2_.read()
+    #    planetxt = file2_.read()
+    #htmltxt.replace("###",encoded_string)
+    #htmltxt.replace("###",planename)
+    #hashMap.put("toast", encoded_string)
+    #htmltxt.replace("&nbsp"," ")
+    #hashMap.put("html_plane_all", htmltxt)
 
+    return hashMap
 
 def template_html_plane(hashMap,_files=None,_data=None):
     import base64
