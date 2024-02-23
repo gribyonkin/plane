@@ -1,10 +1,10 @@
 #from fileinput import filename
 from ru.travelfood.simple_ui import SimpleUtilites as suClass
-import base64
+
 
 
 def template_html_plane(hashMap,_files=None,_data=None):
-    
+    import base64
     from io import BytesIO
    
     filename = suClass.get_stored_file("template1")
@@ -14,8 +14,8 @@ def template_html_plane(hashMap,_files=None,_data=None):
 
     planename = suClass.get_stored_file("plane")
     hashMap.put("toast", planename)
-    #with open(planename,"rb") as file2_:
-    #    encoded_string = base64.b64encode(file2_.read())
+    with open(planename,"rb") as file2_:
+        encoded_string = base64.b64encode(file2_.read())
     #    planetxt = file2_.read()
     #htmltxt.replace("###",planetxt)
 
