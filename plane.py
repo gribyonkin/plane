@@ -7,14 +7,15 @@ def starter(hashMap,_files=None,_data=None):
    
     planename = suClass.get_stored_file("all")
     #hashMap.put("toast", planename)
-    hashMap.put("pic_str", planename)
-    #with open(planename,"rb") as file2_:
-    #    encoded_string = base64.b64encode(file2_.read())
+    #hashMap.put("pic_str", planename)
+    with open(planename,"rb") as file2_:
+        encoded_string = base64.b64encode(file2_.read())
         #encoded_string = file2_.read()
     #    planetxt = file2_.read()
     #htmltxt.replace("###",encoded_string)
     #htmltxt.replace("###",planename)
     #hashMap.put("toast", encoded_string)
+    hashMap.put("pic_str", encoded_string)
     #htmltxt.replace("&nbsp"," ")
     #hashMap.put("html_plane_all", htmltxt)
 
