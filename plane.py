@@ -17,7 +17,7 @@ def template_html_plane(hashMap,_files=None,_data=None):
     with open(planename,"rb") as file2_:
         encoded_string = base64.b64encode(file2_.read())
     #    planetxt = file2_.read()
-    #htmltxt.replace("###",planetxt)
+    htmltxt.replace("###",encoded_string)
 
     #htmltxt.replace("&nbsp"," ")
     hashMap.put("html_plane_all", htmltxt)
