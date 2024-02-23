@@ -1,4 +1,4 @@
-from fileinput import filename
+#from fileinput import filename
 from ru.travelfood.simple_ui import SimpleUtilites as suClass
 import base64
 
@@ -8,7 +8,7 @@ def template_html_plane(hashMap,_files=None,_data=None):
     from io import BytesIO
    
     filename = suClass.get_stored_file("template1")
-
+    hashMap.put("toast", filename)
     with open(filename) as file1_:
         htmltxt = file1_.read()
 
