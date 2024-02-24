@@ -30,7 +30,7 @@ def starter(hashMap,_files=None,_data=None):
 
     return hashMap
 
-def starter(hashMap,_files=None,_data=None):
+def starter3(hashMap,_files=None,_data=None):
     import base64
     from io import BytesIO
    
