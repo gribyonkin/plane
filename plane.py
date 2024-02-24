@@ -24,7 +24,7 @@ def starter(hashMap,_files=None,_data=None):
     #htmltxt.replace("###",planename)
     #hashMap.put("toast", encoded_string)
     encoded_string.replace("&nbsp"," ")    
-    hashMap.put("pic_str", encoded_string)
+    #hashMap.put("pic_str", encoded_string)
     #htmltxt.replace("&nbsp"," ")
     #hashMap.put("html_plane_all", htmltxt)
 
