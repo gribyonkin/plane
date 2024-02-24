@@ -1,5 +1,9 @@
 #from fileinput import filename
 from ru.travelfood.simple_ui import SimpleUtilites as suClass
+#hashMap.get("listener")
+
+def html_on_input(hashMap,_files=None,_data=None):
+    hashMap.put("toast",hashMap.get("listener"))
 
 def starter(hashMap,_files=None,_data=None):
     import base64
