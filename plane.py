@@ -1,6 +1,5 @@
 #from fileinput import filename
 from ru.travelfood.simple_ui import SimpleUtilites as suClass
-#hashMap.get("listener")  hashMap.get("jsdata")
 
 def html_on_input(hashMap,_files=None,_data=None):
     if hashMap.get("listener")=="JSClick":
@@ -32,7 +31,7 @@ def starter(hashMap,_files=None,_data=None):
 
 def starter3(hashMap,_files=None,_data=None):
     import base64
-    from io import BytesIO
+    #from io import BytesIO
    
     filename = suClass.get_stored_file("template3")
     #hashMap.put("toast", filename)
@@ -44,9 +43,10 @@ def starter3(hashMap,_files=None,_data=None):
     with open(planename,"rb") as file2_:
         encoded_string = base64.b64encode(file2_.read()).decode('utf-8')
     
-    encoded_string.replace("&nbsp"," ")
+    hashMap.put("toast", encoded_string)
+    #encoded_string.replace("&nbsp"," ")
    
-    htmltxt.replace("###",encoded_string)
+    #htmltxt.replace("###",encoded_string)
     #htmltxt.replace("###",planename)
     #hashMap.put("toast", encoded_string)
     #htmltxt.replace("&nbsp"," ")
@@ -196,8 +196,6 @@ def html_close_corp(hashMap,_files=None,_data=None):
     hashMap.put("ShowScreen", "Общий план")
 
     return hashMap
-
-#hashMap.put("toast",hashMap.get("listener"))
 
 def show_listener(hashMap,_files=None,_data=None):
 
