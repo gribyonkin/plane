@@ -46,7 +46,7 @@ def starter3(hashMap,_files=None,_data=None):
     hashMap.put("toast", encoded_string)
     encoded_string.replace("&nbsp"," ")
    
-    #htmltxt.replace("###",encoded_string)
+    htmltxt.replace("###",encoded_string)
     #htmltxt.replace("###",planename)
     #hashMap.put("toast", encoded_string)
     #htmltxt.replace("&nbsp"," ")
