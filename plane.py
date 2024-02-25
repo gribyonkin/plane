@@ -31,7 +31,7 @@ def starter(hashMap,_files=None,_data=None):
 
 def starter3(hashMap,_files=None,_data=None):
     import base64
-    #from io import BytesIO
+    from io import BytesIO
    
     filename = suClass.get_stored_file("template3")
     #hashMap.put("toast", filename)
