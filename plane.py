@@ -38,8 +38,8 @@ def starter3(hashMap,_files=None,_data=None):
     with open(filename) as file1_:
         htmltxt = file1_.read()
 
-    planename = suClass.get_stored_file("plane")
-    hashMap.put("toast", planename)
+    planename = suClass.get_stored_file("mainplane")
+    #hashMap.put("toast", planename)
     with open(planename,"rb") as file2_:
         encoded_string = base64.b64encode(file2_.read()).decode('utf-8')
     
