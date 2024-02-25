@@ -44,7 +44,7 @@ def starter3(hashMap,_files=None,_data=None):
         encoded_string = base64.b64encode(file2_.read()).decode('utf-8')
     
     hashMap.put("toast", encoded_string)
-    #encoded_string.replace("&nbsp"," ")
+    encoded_string.replace("&nbsp"," ")
    
     #htmltxt.replace("###",encoded_string)
     #htmltxt.replace("###",planename)
