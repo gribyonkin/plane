@@ -68,7 +68,7 @@ def starter4(hashMap,_files=None,_data=None):
     #hashMap.put("toast", planename)
     with open(planename,"rb") as file2_:
         encoded_string = base64.b64encode(file2_.read()).decode('utf-8')
-    encoded_string.replace("&nbsp"," ")
+    encoded_string.replace("&nbsp","")
     hashMap.put("toast", encoded_string)
   
     htmltxt.replace("###",encoded_string)
