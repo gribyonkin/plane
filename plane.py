@@ -72,10 +72,10 @@ def starter4(hashMap,_files=None,_data=None):
     encoded_string.replace("&nbsp"," ")
     hashMap.put("toast", encoded_string)
   
-    #htmltxt.replace("###",encoded_string)
+    htmltxt.replace("###",encoded_string)
     #htmltxt.replace("###",planename)
     #hashMap.put("toast", encoded_string)
-    #htmltxt.replace("&nbsp"," ")
+    htmltxt.replace("&nbsp"," ")
     
     hashMap.put("html_plane_all", htmltxt)
 
