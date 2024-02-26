@@ -63,15 +63,15 @@ def starter4(hashMap,_files=None,_data=None):
     with open(filename) as file1_:
         htmltxt = file1_.read()
 
-    #planename = suClass.get_stored_file("pl")
-    #hashMap.put("pl_file", planename)
+    planename = suClass.get_stored_file("pl")
+    hashMap.put("pl_file", planename)
     #hashMap.put("toast", planename)
-    #with open(planename,"rb") as file2_:
-    #    encoded_string = base64.b64encode(file2_.read()).decode('utf-8')
+    with open(planename,"rb") as file2_:
+        encoded_string = base64.b64encode(file2_.read()).decode('utf-8')
     
-    #hashMap.put("toast", encoded_string)
-    #encoded_string.replace("&nbsp"," ")
-   
+    encoded_string.replace("&nbsp"," ")
+    hashMap.put("toast", encoded_string)
+  
     #htmltxt.replace("###",encoded_string)
     #htmltxt.replace("###",planename)
     #hashMap.put("toast", encoded_string)
